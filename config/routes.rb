@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   get 'new'         => 'post#new'       # 글 작성 페이지
   post 'create'     => 'post#create'    # 글 작성
   get 'destroy/:id' => 'post#destroy'   # 글 삭제
@@ -12,7 +13,15 @@ Rails.application.routes.draw do
   delete  'comment/destroy/:comment_id' => 'comment#destroy'    # 댓글 삭제
   post  'comment/update/:comment_id'    => 'comment#update'     # 댓글 수정
   
-  root 'post#index'                     # 기본 페이지는 Index 페이지
+   devise_scope :user do
+    authenticated :user do
+      root 'post#index', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

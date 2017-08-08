@@ -3,6 +3,7 @@ class CommentController < ApplicationController
     newComment = Comment.new
     newComment.content = params[:content]
     newComment.post_id = params[:post_id]
+    newComment.user = current_user
     newComment.save
     
     redirect_to :back

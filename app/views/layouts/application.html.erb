@@ -36,8 +36,13 @@
     
     <ul class="nav navbar-nav navbar-right">
       <a href="/new" style="float: left; margin-right: 50px;" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;글작성 하기</a>
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> 회원 가입</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+      <% if user_signed_in? %>
+      <li><a href="#"><%= current_user.username%>님 환영합니다.</a></li>
+      <li><a href="/users/sign_out"><span class="glyphicon glyphicon-user"></span> 로 그 아 웃</a></li>
+      <% else %>
+      <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회 원 가 입</a></li>
+      <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로 그 인</a></li>
+      <% end %>
     </ul>
   </div>
 </nav>
