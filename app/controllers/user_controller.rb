@@ -8,7 +8,7 @@ class UserController < ApplicationController
   end
   
   def rank
-    @rank=User.pluck(:study)
-    
+    rank=User.pluck(:study,:username)
+    @rank=rank.sort {|x,y| y <=> x}
   end
 end

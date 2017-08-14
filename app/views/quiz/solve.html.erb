@@ -59,7 +59,8 @@
          <button class="btn btn-default" data-target="#quiz_1" data-toggle="modal" >퀴즈 풀기</button>
          <% if (@score[0].quiz_score == 100) %>
         
-         <button class="btn btn-default" data-toggle="modal" data-target="#practice">연습하기</button>
+         <button class="btn btn-default" data-toggle="modal" data-target="#practice_1">연습하기</button>
+          
           <% end %>
           <!-- <%= link_to "New", newnew_path, remote: true, class: "btn btn-success pull-right new" %>
        --></div>
@@ -135,7 +136,7 @@
 
   <!--스마트폰 화면으로 연습하기 modal창 부분-->
  <!--<div class="modal fade" id="practice"  tabindex="-1" role="dialog" aria-labelledby="myFullsizeModalLabel">-->
- <div class="modal fade bd-example-modal-lg" id="practice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal fade bd-example-modal-lg" id="practice_1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   
 
        <div class="modal-dialog modal-lg">
@@ -249,10 +250,11 @@
     </div>
 </div> 
 
-<!-- newModal skeleton -->
+ newModal skeleton 
 <div class="modal fade" id="newModal">
   <div class="modal-dialog">
     <div class="modal-content">
     </div>
   </div>
-</div>
+
+
