@@ -1,0 +1,22 @@
+
+alert(#answer);
+
+//퀴즈갯수랑 퀴즈답 불러옴
+(function($){
+  
+  //여기서 퀴즈 갯수 불러옴
+  var num = $("#quiznm").data('quiznm');
+  var answer=[];
+  
+  //answer배열에 답 저장
+   for(var i=0;i< num;i++){
+  answer[i]=$("#foodab"+i).data('foodab');
+  
+  }
+
+
+  
+ 
+  
+  
+})(jQuery)

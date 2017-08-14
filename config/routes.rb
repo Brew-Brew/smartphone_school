@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  get 'test/test1'
+
+  get 'test/test2'
+
+  get 'user/rank'
+  get 'user/mypage'
+  get 'quiz/new' => 'quiz#new', as: 'newnew'
+  get 'user/complete', as: 'complete'
+
+  get "quiz/new_release" => 'quiz#new_release', :as => :new_release
+  get 'quiz/:id/practice' => 'quiz#practice', as: 'practice'
+  get 'quiz/:id/score'=>'quiz#score', as: 'score'
+
+  get 'quiz/:id'=> 'quiz#solve', as: 'solve'
+
+  get 'quiz/:id/text'=>'quiz#text', as: 'text'
+
+  get 'quiz/index'
+  
   
   devise_for :users
   get 'new'         => 'post#new'       # 글 작성 페이지
@@ -15,7 +34,7 @@ Rails.application.routes.draw do
   
    devise_scope :user do
     authenticated :user do
-      root 'post#index', as: :authenticated_root
+      root 'quiz#index', as: :authenticated_root
     end
 
     unauthenticated do

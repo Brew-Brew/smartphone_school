@@ -1,0 +1,14 @@
+<div class="card" id="card_user">
+  <img src="https://image.flaticon.com/icons/svg/375/375278.svg" alt="Avatar" style="width:100%">
+
+</div>
+  <div class="container" style="text-align: center">
+    <h4><b><%=@user.username%>님</b></h4> 
+    <h4><%= @user.phonenumber %></h4>
+    <h4>전체 성취율: <%= @user.study %> %</h4>
+    <div>
+    <% for i in 0..(@score.size - 1)%>
+    <p>과목<%= i+ 1 %> 점수:<%= @score[i].total_score %></p> 
+    <% end %>
+    </div>
+  </div>

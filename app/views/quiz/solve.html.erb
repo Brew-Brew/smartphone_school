@@ -1,0 +1,258 @@
+
+ <!--동영상 강의와 자세한 설명 버튼-->
+     <nav>
+        <ul class="nav nav-tabs">
+          <li class="nav-item" id="lecture">
+            <a class="nav-link " href="/quiz/<%=@subject.id %>" >동영상 강의</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/quiz/<%=@subject.id %>/text">자세한 설명</a>
+          </li>
+        </ul>
+     </nav> 
+     
+    <header>
+      <div class="subject_title">
+        <div>
+              <h2> <%= @subject.name %></h2>
+        </div>
+      </div>
+    </header>
+    
+   
+   <div class="subject_title">
+       <!-- user의 답안 -->
+       <div class="row">
+        <div class="col-md-6" >
+            <div class="quiz_score">
+                <p>user의 답안</p>
+                <p><%= @ans %></p>
+               
+                <!-- user 성취율-->
+                <p>지금까지 퀴즈 최고 정답률</p>
+                <p><%= @score[0].quiz_score %> %</p>
+                
+                <p>맞춘 갯수</p>
+                <p><%= @quiznum %>개중 <%=@sum.to_i %>개 정답</p>
+            </div>
+           </div>
+           <div class="col-md-6" >
+              <div class="practice_score">
+                <p>user의 연습하기</p>
+                <p>성취율 <%=@score[0].practice_score%>%</p>
+            </div>
+         </div>
+      </div>
+        <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <!--동영상 나오는 부분-->
+    <section class="container">
+     <div class="row mt-4">
+       <div class="col-12">
+         <p align="middle"><iframe width="700" height="500" src="<%=@subject.lecture %>" frameborder="0" allowfullscreen></iframe></p>
+       </div>
+     </div>
+
+
+     <!--퀴즈 풀기 버튼-->
+     <footer class="foot">
+       <div class="quiz">
+         <button class="btn btn-default" data-target="#quiz_1" data-toggle="modal" >퀴즈 풀기</button>
+         <% if (@score[0].quiz_score == 100) %>
+        
+         <button class="btn btn-default" data-toggle="modal" data-target="#practice">연습하기</button>
+          <% end %>
+          <!-- <%= link_to "New", newnew_path, remote: true, class: "btn btn-success pull-right new" %>
+       --></div>
+    </footer>
+
+    <!--퀴즈 mdoal popup창 부분 -->
+    
+     <% i= @zero %>
+      
+     <% while i< @quiznum %>
+
+     <div class="modal fade" id="quiz_<%=1+i%>">
+        <div class="modal-dialog">
+          <div class="modal-content">
+                 
+                 <div class="modal-header">
+                   <h3> <%= @quiz[i].title  %> Quiz</h3>
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>  
+                  
+                <div class="modal-body" id="quiz_body">  
+                
+                        <h5>
+                          <%= @quiz[i].content %>(O 또는 X를 선택해주세요)
+                        </h5>
+                        
+                   
+                        <!-- (ajax) input 안에 있는 값 O X  전달 하는 부분-->
+                        <!-- score 액션으로 전달해서 o 나 x 받아와서 .js파일로 보내, 그에따른 정답여부 화면 처리 -->
+                        <form action="/quiz/<%=@subject.id%>/score" data-remote="true" id="answer" method="get">
+                            <input type="submit" name="answer" value="O" id="answer" onmouseout="change2(this)" onclick="change1(this)" style="background-color:white;">
+                            <input type="submit" name="answer" value="X" id="answer" onmouseout="change2(this)" onclick="change1(this)" style="background-color:white;"><br>
+                        </form>
+                        
+                            <!-- 데이터 전달-->
+                             <%= content_tag "div", id: "foodab#{i}", data: {foodab: @quiz[i].answer} do %>
+                                <%end %> 
+                             <%= content_tag "div", id: "quiznm", data: {quiznm: @quiznum} do %>
+                                <%end %> 
+                         
+                </div>
+               
+    
+          <!--다음 퀴즈를 풀 수 있게 하는 버튼-->
+                  <div class="modal-footer">
+
+                     <%if i >= 0 %>
+                         <% i += 1 %>
+                          <%if i ==(@quiz.size - 1) %>
+                          <% i - 1 %>
+                          <%end %>
+                     <%end %>
+                     
+                    <% if i ==1 %>
+                    <button class="button" data-target="#quiz_<%=i %>" data-toggle="modal">닫기</button>
+                    <button class="button" data-target="#quiz_<%=i + 1%>" data-toggle="modal">다음 문제 풀기</button>
+                    
+                    <% elsif i== @quiznum %>
+                   <!-- <button class="button" data-target="#quiz_<%=i %>" data-toggle="modal">이전 문제로 돌아가기</button>
+                -->    <%= button_to "완료", solve_path, :method => "get" %>
+                    
+                    <%else %>
+                  <!--  <button class="button" data-target="#quiz_<%=i %>" data-toggle="modal">이전 문제로 돌아가기</button>
+                -->    <button class="button" data-target="#quiz_<%=i + 1%>" data-toggle="modal">다음 문제 풀기</button>
+                    <% end %>
+                  </div>
+             
+           </div>
+        </div>
+      </div>
+    <%end %>
+   
+
+  <!--스마트폰 화면으로 연습하기 modal창 부분-->
+ <!--<div class="modal fade" id="practice"  tabindex="-1" role="dialog" aria-labelledby="myFullsizeModalLabel">-->
+ <div class="modal fade bd-example-modal-lg" id="practice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  
+
+       <div class="modal-dialog modal-lg">
+           <!--<div class="modal-dialog modal-fullsize" role="document">-->
+           
+           <div class="modal-content">
+              <!--<div class="modal-content modal-fullsize">-->
+                
+                
+              <!-- slides
+    ================================================== -->
+    <div class="slideshow-container">
+  <div class="mySlides" id="firstSlide">
+    <div class="numbertext">1 / 3</div>
+    <div class="slide-content">
+      <!--연습하기 퀴즈 부분-->
+            
+                 <div class="modal-header">
+                     <h3>전화를 걸려면 어떤 버튼을 눌러야 할까요?</h3>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>     
+                 
+                 <div class="modal-body">
+                     <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                     <div class="smartphone-body_1">
+                       <!--<form id="practice" action="/quizzes/practice" method="POST">-->
+                           <input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">
+                           <button class="button1" name="answer" value="correct" title="전화를 할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button2" name="answer" value="wrong" title="메시지를 보낼 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button3" name="answer" value="wrong" title="카카오톡을 이용할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button4" name="answer" value="wrong" title="소리를 조절할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                        <!--</form>-->
+                     </div>        
+                  </div>
+            
+    </div>
+   </div>
+  </div>
+  <!--연습하기 퀴즈 부분 끝--> 
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <div class="slide-content">
+        <!--연습하기 퀴즈 부분-->
+            
+                 <div class="modal-header">
+                     <h3>상단바에서 Wi-Fi를 설정하기 위해서는 어떤 버튼을 눌러야 할까요?</h3>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>     
+                 
+                 <div class="modal-body">
+                     <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                     <div class="smartphone-body_2">
+                       <!--<form id="practice" action="/quizzes/practice" method="POST">-->
+                           <input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">
+                           <button class="button1" name="answer" value="correct" title="WiFi를 설정할 때 누르는 버튼입니다." style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button2" name="answer" value="wrong" title="GPS를 설정할 때 누르는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button3" name="answer" value="wrong" title="자동회전을 조절할 때 누르는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                        <!--</form>-->
+                     </div>        
+                  </div>
+    
+    </div>
+  </div>
+ </div>  
+ <!--연습하기 퀴즈 부분 끝--> 
+        
+        <div class="slideshow-container">
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <div class="slide-content">
+               <!--연습하기 퀴즈 부분-->
+                    
+                         <div class="modal-header">
+                             <h3>3번문제</h3>
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>     
+                         
+                         <div class="modal-body">
+                             <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                             <div class="smartphone-body">
+                                    
+                                
+                                   <input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">
+                                   <form action="/quiz/<%=@subject.id%>/practice" id="practice" method="get" >
+                                       <button class="button1" type="submit" name="answer" value="correct" title="전화를 할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick3()'></button>
+                                    </form>
+                                       <button class="button2" type="submit"name="answer" value="wrong" title="볼륨을 조절할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                       <button class="button3" type="submit"name="answer" value="wrong" title="메시지를 보낼 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                       <button class="button4" type="submit"name="answer" value="wrong" title="카카오톡을 이용할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                       <button class="button5" type="submit"name="answer" value="wrong" title="소리를 조절할 때 사용하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                               
+                             </div>        
+                          </div>
+            
+            <!--연습하기 퀴즈 부분 끝--> 
+            </div>
+          </div>
+            <a class="prev" onclick="prevButtonControl()">&#10094;</a>
+         </div>  
+        <br>
+        <div style="text-align:center">
+          <span class="dot active" ></span>
+          <span class="dot" ></span>
+          <span class="dot" ></span>
+        </div>
+            <!-- /.slides -->
+
+        </div>
+    </div>
+</div> 
+
+<!-- newModal skeleton -->
+<div class="modal fade" id="newModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>

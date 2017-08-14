@@ -1,0 +1,11 @@
+<div class="rank">
+    <h4>순위<h4>
+    <img src="/assets/rank.png" id="rank"></img><br>
+    <%for i in 0..(@rank.size - 1) %>
+   <h4> <%=i+ 1%>등: <% @user=User.where(study: @rank[i]) %></h4>
+    <%=@user[0].username%>님
+    <%=@rank[i]%>%
+    <br>
+
+<%end %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808201116) do
+ActiveRecord::Schema.define(version: 20170811053912) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -31,10 +31,45 @@ ActiveRecord::Schema.define(version: 20170808201116) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "quizzes", force: :cascade do |t|
+    t.text     "content"
+    t.string   "title"
+    t.string   "answer"
+    t.integer  "subject_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subject_id"], name: "index_quizzes_on_subject_id"
+    t.index ["user_id"], name: "index_quizzes_on_user_id"
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer  "total_score"
+    t.integer  "quiz_score"
+    t.integer  "practice_score"
+    t.integer  "subject_id"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["subject_id"], name: "index_scores_on_subject_id"
+    t.index ["user_id"], name: "index_scores_on_user_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "lecture"
+    t.integer  "score"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_subjects_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "username",               default: "", null: false
+    t.integer  "study"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
