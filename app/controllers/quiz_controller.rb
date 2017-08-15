@@ -136,6 +136,27 @@ class QuizController < ApplicationController
                     format.json { render :json => @ans }
                     format.js  
                 end
+                
+                
+                #모델에서 과목이름 바뀌어서 여기도 바꿔놨어요 상백형님
+                        
+                        #연습하기 
+        if (@subject.name.include? '주요 버튼 및 기능')
+          @prac = 1                                  
+        elsif (@subject.name.include? '전화/메시지')
+          @prac = 2
+        elsif (@subject.name.include? '카메라')
+          @prac = 3
+        elsif (@subject.name.include? '환경설정')
+          @prac = 4
+        elsif (@subject.name.include? '마켓/어플')
+          @prac = 5
+        elsif (@subject.name.include? 'SNS')
+          @prac = 6
+        end
+end
+                
+
     
    
   end
@@ -157,6 +178,6 @@ class QuizController < ApplicationController
       format.js {}
     end
     end
-end
+# end
 
 

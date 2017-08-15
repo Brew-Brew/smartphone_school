@@ -56,12 +56,12 @@ User.where(id: self.id).update(study: 0)
 
 
 subject_list = [
-  [self.id,'과목1','https://www.youtube.com/embed/QCVAluZkctU'],
-  [self.id,'과목2','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'과목3','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'과목4','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'과목5','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'과목6','https://www.youtube.com/embed/hwfyujTryAI']
+  [self.id,'주요 버튼 및 기능','https://www.youtube.com/embed/EsDOZ4Bz7Vk'],
+  [self.id,'전화/메시지','https://www.youtube.com/embed/fds8542N7Cs'],
+  [self.id,'카메라','https://www.youtube.com/embed/hwfyujTryAI'],
+  [self.id,'환경설정','https://www.youtube.com/embed/hwfyujTryAI'],
+  [self.id,'마켓/어플','https://www.youtube.com/embed/hwfyujTryAI'],
+  [self.id,'SNS','https://www.youtube.com/embed/hwfyujTryAI']
 ]
 subject_list.each do |current_user,name,lecture|
   Subject.create(user_id: current_user,name: name,lecture: lecture,score: 0)
@@ -83,10 +83,9 @@ Score.create(user_id: user_id,total_score: total_score,quiz_score: quiz_score,pr
 end
 
 quiz_list1=[
-  [self.id,(self.id - 1)*6 + 1,'메뉴-1 문제1','문제내용1','O'],
-  [self.id,(self.id - 1)*6 + 1,'메뉴-1 문제2','문제내용2','X'],
-  [self.id,(self.id - 1)*6 + 1,'메뉴-1 문제3','문제내용3','O'],
-  [self.id,(self.id - 1)*6 + 1,'메뉴-1 문제4','문제내용4','X']
+  [self.id,(self.id - 1)*6 + 1,'주요버튼 및기능 문제1','홈버튼은 휴대폰 아래에 위치한다.','O'],
+  [self.id,(self.id - 1)*6 + 1,'주요버튼 및기능 문제2','전면카메라, 후면카메라 이렇게 두개의 카메라가 있다.','O'],
+  [self.id,(self.id - 1)*6 + 1,'주요버튼 및기능 문제3','사진을 선택하거나, 앱을 실행할때 화면을 꼭 두번 눌러야한다.','X']
   ]
   
 #quiz 생성
@@ -95,9 +94,9 @@ quiz_list1.each do |user_id,subject_id,title,content,answer|
   end
   
 quiz_list2=[
-  [self.id,(self.id - 1)*6 + 2,'메뉴-2 문제1','문제내용1','O'],
-  [self.id,(self.id - 1)*6 + 2,'메뉴-2 문제2','문제내용2','X'],
-  [self.id,(self.id - 1)*6 + 2,'메뉴-2 문제3','문제내용3','O'],
+  [self.id,(self.id - 1)*6 + 2,'전화/메시지 문제1','연락처의 +버튼으로도 연락처를 저장할 수 있다.','O'],
+  [self.id,(self.id - 1)*6 + 2,'전화/메시지 문제2','영상통화를 하며 카메라 전환기능을 사용할 수 없다','X'],
+  [self.id,(self.id - 1)*6 + 2,'전화/메시지 문제3','메시지를 보낼때 보낼사람을 이름으로 검색할 수 있다.','O']
   ]
  
   quiz_list2.each do |user_id,subject_id,title,content,answer|

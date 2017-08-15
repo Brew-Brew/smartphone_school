@@ -48,6 +48,27 @@ $.rails.showConfirmationDialog = function(link){
 };
 
 
+var printIndex = document.getElementsByClassName("indexNum")
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  printIndex.write("인덱스"+slideIndex);
+  dots[slideIndex-1].className += " active";
+}
+
    function btnClick1()
   {
      swal({
@@ -57,6 +78,7 @@ $.rails.showConfirmationDialog = function(link){
   confirmButtonText: "다음문제"
 }).then(function(){
     showSlides(slideIndex += 1);
+    
 
 })
   }
@@ -78,27 +100,6 @@ $.rails.showConfirmationDialog = function(link){
   confirmButtonText: "종료하기"
 }).then(function(){
     $('#practice').modal('hide');
+   
 })
 }
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-
-

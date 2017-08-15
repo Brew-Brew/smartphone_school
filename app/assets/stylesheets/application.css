@@ -29,54 +29,50 @@
 
  /*스마트폰 화면 css*/
 .modal-body .smartphone-body_1 {
-  position: relative;
+   position: relative;
    width: 100%;
    height: 600px;
-   background: url('http://cfile29.uf.tistory.com/image/194BEF42500CF9E625730B') no-repeat center center;
-   background-size: 67% 90%;
+   background: url('/assets/screen.jpg') no-repeat center center;
+   background-size: 40% 100%;
    text-align: center;
    display: inline-block;
 }
-
 
 .modal-body .smartphone-body_2 {
    position: relative;
    width: 100%;
    height: 600px;
-   background: url('/assets/1.jpg') no-repeat center center;
-   background-size: 70% 90%;
+   background: url('/assets/screen.jpg') no-repeat center center;
+   background-size: 40% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_3 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/smartphone-back.png') no-repeat center center;
+   background-size: 40% 100%;
    text-align: center;
    display: inline-block;
 }
 
 
-
 /* 1번째 연습문제 버튼 css*/
 
 
-/*전화버튼 css*/
+/*홈버튼 css*/
 .smartphone-body_1 .button1 {
     opacity: 0;
     position: absolute;
-    bottom: 8.5%;
-    left: 19.3%;
+    bottom: 2%;
+    left: 45%;
     font-size: 0px;
-    padding: 19px 3.5%;
+    padding: 17px 4.5%;
     border: 0;
     outline: 0;
 }
-
-/*전화버튼 css*/
-/*.smartphone-body_1 .button1 {*/
-/*    opacity: 0;*/
-/*    position: absolute;*/
-/*    bottom: 50px;*/
-/*    left: 54px;*/
-/*    font-size: 0px;*/
-/*    padding: 17px 23px;*/
-/*    border: 0;*/
-/*    outline: 0;*/
-/*}*/
 
 .smartphone-body_1 .button1:hover {
     opacity: 0.5;
@@ -88,14 +84,14 @@
 }
 
 
-/*메시지 버튼 css*/
+/*취소 및 뒤로가기 버튼 css*/
 .smartphone-body_1 .button2 {
     opacity: 0;
     position: absolute;
-    bottom: 8.5%;
-    right: 32.3%;
+    bottom: 2%;
+    right: 34.5%;
     font-size: 0px;
-    padding: 19px 3.5%;
+    padding: 17px 3%;
     border: 0;
     outline: 0;
 }
@@ -104,21 +100,21 @@
     opacity: 0.5;
     background:#000;
     border-width: 5px;
-    border-radius: 5px;
+    border-radius: 14px;
     border-style: groove;
     border-color: red;
 }
 
 
 
-/*카톡 버튼 css*/
+/*전원버튼 css*/
 .smartphone-body_1 .button3 {
     opacity: 0;
     position: absolute;
-    bottom: 55%;
-    right: 45.5%;
+    top: 35%;
+    right: 28.5%;
     font-size: 0px;
-    padding: 19px 3.5%;
+    padding: 20px 1%;
     border: 0;
     outline: 0;
 }
@@ -134,23 +130,23 @@
 
 
 
-/*소리조절 버튼 css*/
+/*메뉴 버튼 css*/
 .smartphone-body_1 .button4 {
     opacity: 0;
     position: absolute;
-    bottom: 41%;
-    left: 19%;
+    bottom: 2%;
+    left: 35.5%;
     font-size: 0px;
-    padding: 19px 3.5%;
+    padding: 17px 3%;
     border: 0;
     outline: 0;
 }
 
 .smartphone-body_1 .button4:hover {
-   opacity: 0.5;
+    opacity: 0.5;
     background:#000;
     border-width: 5px;
-    border-radius: 5px;
+    border-radius: 14px;
     border-style: groove;
     border-color: red;
 }
@@ -161,33 +157,12 @@
 
 
 
-/*Wi-Fi 버튼 css*/
+/*arrow-down 버튼 css*/
 .smartphone-body_2 .button1 {
-    opacity: 0;
+    background: url('/assets/long-down-arrow.png') no-repeat center center;
+    background-size: 100% 100%;
+    opacity: 1;
     position: absolute;
-    /*border-radius: 19px;*/
-    top: 9%;
-    left: 15%;
-    font-size: 0px;
-    padding: 39px 6.5%;
-    border: 0;
-    outline: 0;
-}
-
-.smartphone-body_2 .button1:hover {
-   opacity: 0.5;
-    background:#000;
-    border-width: 5px;
-    border-radius: 5px;
-    border-style: groove;
-    border-color: red;
-}
-
-/*GPS 버튼 css*/
-.smartphone-body_2 .button2 {
-    opacity: 0;
-    position: absolute;
-    border-radius: 19px;
     top: 9%;
     left: 43%;
     font-size: 0px;
@@ -196,37 +171,175 @@
     outline: 0;
 }
 
-.smartphone-body_2 .button2:hover {
-   opacity: 0.5;
-    background:#000;
+.smartphone-body_2 .button1:hover {
+    opacity: 0.5;
+    /*background:#000;*/
     border-width: 5px;
     border-radius: 5px;
-    border-style: groove;
-    border-color: red;
+    /*border-style: groove;*/
+    /*border-color: red;*/
 }
 
-
-/*자동회전 버튼 css*/
-.smartphone-body_2 .button3 {
-    opacity: 0;
+/*arrow-up 버튼 css*/
+.smartphone-body_2 .button2 {
+    background: url('/assets/long-up-arrow.png') no-repeat center center;
+    background-size: 100% 100%;
+    opacity: 1;
     position: absolute;
-    border-radius: 19px;
-    top: 9%;
-    left: 71%;
+    bottom: 17%;
+    left: 43%;
     font-size: 0px;
     padding: 39px 6.5%;
     border: 0;
     outline: 0;
 }
 
+.smartphone-body_2 .button2:hover {
+    opacity: 0.5;
+    /*background:#000;*/
+    border-width: 5px;
+    border-radius: 5px;
+    /*border-style: groove;*/
+    /*border-color: red;*/
+}
+
+
+/*double-arrow 버튼 css*/
+.smartphone-body_2 .button3 {
+    background: url('/assets/double-arrow.png') no-repeat center center;
+    background-size: 100% 100%;
+    opacity: 1;
+    position: absolute;
+    top: 42%;
+    left: 40%;
+    font-size: 0px;
+    padding: 39px 10%;
+    border: 0;
+    outline: 0;
+}
+
 .smartphone-body_2 .button3:hover {
-   opacity: 0.5;
+    opacity: 0.5;
+    /*background:#000;*/
+    border-width: 5px;
+    border-radius: 5px;
+    /*border-style: groove;*/
+    /*border-color: red;*/
+}
+
+
+/* 3번째 연습문제 css*/
+
+/*충전부 및 pc 연결부분 css*/
+.smartphone-body_3 .button1 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 46.5%;
+    font-size: 0px;
+    padding: 15px 3.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_3 .button1:hover {
+    opacity: 0.5;
     background:#000;
     border-width: 5px;
     border-radius: 5px;
     border-style: groove;
     border-color: red;
 }
+
+
+/*후면 카메라 css*/
+.smartphone-body_3 .button2 {
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 45.5%;
+    font-size: 0px;
+    padding: 30px 4%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_3 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 30px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*플래시 css*/
+.smartphone-body_3 .button3 {
+    opacity: 0;
+    position: absolute;
+    top: 10.5%;
+    left: 56%;
+    font-size: 0px;
+    padding: 26px 1.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_3 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*이어폰 연결 잭 css*/
+.smartphone-body_3 .button4 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 59%;
+    font-size: 0px;
+    padding: 15px 2%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_3 .button4:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+/*음량 버튼 css*/
+.smartphone-body_3 .button5 {
+    opacity: 0;
+    position: absolute;
+    top: 21%;
+    right: 28%;
+    font-size: 0px;
+    padding: 26px 1.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_3 .button5:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
 
 
 
@@ -301,4 +414,36 @@
 }
 .rank{
     text-align: center;
+}
+#quiz_body{
+    margin-top: 9rem;
+    padding-bottom: 9rem;
+}
+
+.carousel-inner{
+    height: 20rem;
+    
+   margin-bottom: 10rem;
+}
+.carousel-inner .item{
+    width: fit-content;
+}
+
+
+/* navbar 민트색 관련*/
+.navbar{
+    background-color: #83c9b0;
+    border-color: #83c9b0;
+}
+.navbar a:link{
+    color: white;
+}
+.navbar a:visited{
+    color:white;
+}
+.navbar a:active{
+    color:white;
+}
+.navbar a:hover{
+    color:#83c9b0;
 }
