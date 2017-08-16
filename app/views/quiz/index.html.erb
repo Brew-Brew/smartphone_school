@@ -1,4 +1,43 @@
+<!-- 메인화면 슬라이드 넘어가는 부분 ------->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <p style="text-align: center">
+      <img src='/assets/main-1.jpg' alt="메인" style="max-width: 100%; height: auto;">
+      </p>
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+
+    <div class="item">
+      <p style="text-align: center">
+      <img src='/assets/main-1.jpg' alt="메인" style="max-width: 100%; height: auto;">
+      </p>
+      <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item">
+     <p style="text-align: center">
+      <img src='/assets/main-1.jpg' alt="메인" style="max-width: 100%; height: auto;">
+      </p>
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- 메인화면 슬라이드 넘어가는 부분  끝------->
 <div class="row">        
     <% @subjects.each do |s|%>   
     <div class="col-md-4" id="quiz_main">

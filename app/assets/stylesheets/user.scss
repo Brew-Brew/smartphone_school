@@ -85,16 +85,36 @@ h1{
 }
 
 .inner-screen{
-  width: 800px;
-  height: 340px;
+ 
+  height: 50rem;
   background: #83c9b0;
   margin: 0px auto;
   padding-top: 2rem;
 }
 
+.inner-screen2{
+ 
+  height: 65rem;
+  background: #83c9b0;
+  margin: 0px auto;
+  padding-top: 2rem;
+}
+
+
 .form{
   width: 40rem;
   height: 30rem;
+  background: #edeff1;
+  margin: 8rem auto;
+  padding-top: 20px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.form2{
+  width: 45rem;
+  height: 60rem;
   background: #edeff1;
   margin: 0px auto;
   padding-top: 20px;
@@ -142,6 +162,26 @@ input[type="password"]{
 input[type="password"]:focus{
   border: 2px solid #1abc9d
 }
+input[type="email"]{
+  display: block;
+  width: 309px;
+  height: 35px;
+  margin: 15px auto;
+  background: #fff;
+  border: 0px;
+  padding: 5px;
+  font-size: 16px;
+   border: 2px solid #fff;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+input[type="email"]:focus{
+  border: 2px solid #1abc9d
+}
+
 
 input[type="submit"]{
   display: block;

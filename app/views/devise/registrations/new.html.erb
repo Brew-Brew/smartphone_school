@@ -1,35 +1,38 @@
-<div class="user_page">
-<h2>회 원 가 입 페 이 지</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <p><%= f.label "전 화 번 호" %><br />
-    <%= f.text_field :phonenumber %></p>
-    <p><%= f.label "이 름" %><br />
-    <%= f.text_field :username %></p>
-    <%= f.label "이 메 일" %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label "비 밀 번 호" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "비 밀 번 호 확 인" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "회 원 가 입" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+ <div class="inner-screen2">
+    <div class="user_page" id="login_page">
+      <div class="form2">
+      <h2>회 원 가 입 페 이 지</h2>
+      
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+      
+        <div class="field">
+          <p><%= f.label "전 화 번 호" %><br />
+          <%= f.text_field :phonenumber %></p>
+          <p><%= f.label "이 름" %><br />
+          <%= f.text_field :username %></p>
+          <%= f.label "이 메 일" %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+      
+        <div class="field">
+          <%= f.label "비 밀 번 호" %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+      
+        <div class="field">
+          <%= f.label "비 밀 번 호 확 인" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+      
+        <div class="actions">
+          <%= f.submit "회 원 가 입" %>
+        </div>
+      <% end %>
+      
+      </div>
+    </div>
 </div>
