@@ -1,13 +1,15 @@
  <!--동영상 강의와 자세한 설명 버튼-->
-     <nav>
+     <nav class="nav-tabs">
+       
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" href="/quiz/<%=@subject.id %>">동영상 강의</a>
+            <a class="nav-link-text" href="/quiz/<%=@subject.id%>">동영상 강의</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/quiz/<%=@subject.id %>/text">자세한 설명</a>
+            <a class="nav-link-text"href="/quiz/<%=@subject.id%>/text">자세한 설명</a>
           </li>
         </ul>
+       
      </nav> 
      
 <!--text 부분 -->

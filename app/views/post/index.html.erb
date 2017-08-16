@@ -1,31 +1,33 @@
-<h1>메인 화면 페이지</h1>
-<p>글 목록을 보여줍니다.</p>
-<hr>
-<% if @listPost.empty? %>
-    <h3 class="text-center">글이 없습니다!</h3>
-<% else %>
-    <table class="table table-hover table-striped">
-        <thead>
-            <th width="100px">글 번호</th>
-            <th>글 제목</th>
-            <th width="60px"></th>
-        </thead>
-        <tbody>
-            <% @listPost.each do |onePost| %>
-                <tr>
-                    <td><%= onePost.id %></td>
-                    <td>
-                        <%= link_to onePost.title, "show/#{onePost.id}" %>
-                    </td>
-                    <td>
-                        <%= link_to '', "/edit/#{onePost.id}", class: "glyphicon glyphicon-pencil" %>&nbsp;
-                        <%= link_to '', "/destroy/#{onePost.id}", class: "glyphicon glyphicon-remove" %>
-                    </td>
-                </tr>
-            <% end %>
-        </tbody>
-        <tfoot>
-            
-        </tfoot>
-    </table>
-<% end %>
+<div class="notice">
+    <h1>공지방</h1>
+    <p>스마트폰 스쿨 공지사항</p>
+    <hr>
+    <% if @listPost.empty? %>
+        <h3 class="text-center">글이 없습니다!</h3>
+    <% else %>
+        <table class="table table-hover table-striped">
+            <thead>
+                <th width="100px">글 번호</th>
+                <th>글 제목</th>
+                <th width="60px"></th>
+            </thead>
+            <tbody>
+                <% @listPost.each do |onePost| %>
+                    <tr>
+                        <td><%= onePost.id %></td>
+                        <td>
+                            <%= link_to onePost.title, "show/#{onePost.id}" %>
+                        </td>
+                        <td>
+                            <%= link_to '', "/edit/#{onePost.id}", class: "glyphicon glyphicon-pencil" %>&nbsp;
+                            <%= link_to '', "/destroy/#{onePost.id}", class: "glyphicon glyphicon-remove" %>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+        </table>
+    <% end %>
+</div>

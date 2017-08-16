@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  get 'test/test1'
 
-  get 'test/test2'
-
+  get 'user/test'
   get 'user/rank'
   get 'user/mypage'
   get 'quiz/new' => 'quiz#new', as: 'newnew'

@@ -1,30 +1,31 @@
 
-<div class="user_page" id="login_page">
-<h2>로 그 인 페 이 지</h2>
-
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <p><%= f.label "전 화 번 호" %><br />
-    <%= f.text_field :login %></p>
-  </div>
-
-  <div class="field">
-    <%= f.label "비 밀 번 호" %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label "기억하기" %>
+    <div class="inner-screen">
+        <div class="user_page" id="login_page">
+          <div class="form">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <p><%= f.label "전 화 번 호" %><br />
+              <%= f.text_field :login %></p>
+            </div>
+          
+            <div class="field">
+              <%= f.label "비 밀 번 호" %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+          
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label "기억하기" %>
+              </div>
+            <% end -%>
+          
+            <div class="actions">
+              <%= f.submit "로 그 인" %>
+            </div>
+          <% end %>
+          
+         <!-- <%= render "devise/shared/links" %> -->
+          </div>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "로 그 인" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-</div>

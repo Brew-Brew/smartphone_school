@@ -1,4 +1,7 @@
 class UserController < ApplicationController
+  
+  
+  
   def mypage
     @user=current_user
     @score=Score.where(user_id: current_user.id)

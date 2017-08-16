@@ -16,7 +16,6 @@
  */
 .user_page{
     text-align: center;
-    margin-top: 10rem;
 }
 
 
@@ -27,7 +26,7 @@
    height: 300px;
 }
 
- /*스마트폰 화면 css*/
+ /* modal 스마트폰 화면 css*/
 .modal-body .smartphone-body_1 {
    position: relative;
    width: 100%;
@@ -58,8 +57,37 @@
    display: inline-block;
 }
 
+.modal-body .smartphone-body_4 {
+  position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/phone-number.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
 
-/* 1번째 연습문제 버튼 css*/
+.modal-body .smartphone-body_5 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/phone-slide.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_6 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/message.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+/* 과목1 1번째 연습하기 버튼 css*/
 
 
 /*홈버튼 css*/
@@ -153,7 +181,7 @@
 
 
 
-/* 2번째 연습문제 버튼 css*/
+/* 과목1 2번째 연습하기 버튼 css*/
 
 
 
@@ -228,7 +256,7 @@
 }
 
 
-/* 3번째 연습문제 css*/
+/* 과목1 3번째 연습하기 버튼 css*/
 
 /*충전부 및 pc 연결부분 css*/
 .smartphone-body_3 .button1 {
@@ -339,6 +367,256 @@
 }
 
 
+/* 과목2 1번째 연습문제 버튼 css*/
+
+
+/*연락처 추가 버튼 css*/
+.smartphone-body_4 .button1 {
+    opacity: 0;
+    position: absolute;
+    top: 13%;
+    left: 25%;
+    font-size: 0px;
+    padding: 19px 24.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_4 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*전화목록으로 돌아가는 버튼 css*/
+.smartphone-body_4 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 2%;
+    right: 28.5%;
+    font-size: 0px;
+    padding: 25px 4%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_4 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+/*통화 버튼 css*/
+.smartphone-body_4 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 2%;
+    right: 45.3%;
+    font-size: 0px;
+    padding: 25px 4%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_4 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+/*영상통화 버튼 css*/
+.smartphone-body_4 .button4 {
+    opacity: 0;
+    position: absolute;
+    bottom: 2%;
+    right: 62%;
+    font-size: 0px;
+    padding: 25px 4%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_4 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+/*번호취소 버튼 css*/
+.smartphone-body_4 .button5 {
+    opacity: 0;
+    position: absolute;
+    top: 32.5%;
+    right: 24.9%;
+    font-size: 0px;
+    padding: 25px 2.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_4 .button5:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/* 과목2 2번째 연습문제 버튼 css*/
+
+
+/*long-right-arrow css*/
+.smartphone-body_5 .button1 {
+    background: url('/assets/long-right-arrow.png') no-repeat center center;
+    background-size: 100% 100%;
+    opacity: 1;
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    font-size: 0px;
+    padding: 42px 9%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_5 .button1:hover {
+    opacity: 0.5;
+    border-width: 5px;
+    border-radius: 5px;
+}
+
+/*전화통화 버튼 css*/
+.smartphone-body_5 .button2 {
+    opacity: 0;
+    position: absolute;
+    top: 25.5%;
+    right: 25%;
+    font-size: 0px;
+    padding: 20px 2.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_5 .button2:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*long-left-arrow css*/
+.smartphone-body_5 .button3 {
+    background: url('/assets/long-left-arrow.png') no-repeat center center;
+    background-size: 100% 100%;
+    opacity: 1;
+    position: absolute;
+    border-radius: 19px;
+    bottom: 23%;
+    right: 9.5%;
+    font-size: 0px;
+    padding: 42px 9%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_5 .button3:hover {
+    opacity: 0.5;
+    border-width: 5px;
+    border-radius: 5px;
+}
+
+
+/*과목2 3번째 연습문제 버튼*/
+
+
+/*상대방 검색 버튼 css*/
+.smartphone-body_6 .button1 {
+    opacity: 0;
+    position: absolute;
+    top: 12.5%;
+    left: 25%;
+    font-size: 0px;
+    padding: 19px 24.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_6 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*메시지 보내는 버튼 css*/
+.smartphone-body_6 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 39.5%;
+    right: 26%;
+    font-size: 0px;
+    padding: 15.5px 3%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_6 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*파일첨부 버튼 css*/
+.smartphone-body_6 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 39.5%;
+    left: 25%;
+    font-size: 0px;
+    padding: 16px 2.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_6 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
 
 
 
@@ -421,9 +699,7 @@
 }
 
 .carousel-inner{
-    height: 20rem;
-    
-   margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }
 .carousel-inner .item{
     width: fit-content;
@@ -444,6 +720,44 @@
 .navbar a:active{
     color:white;
 }
-.navbar a:hover{
+.navbar #nav-main a:hover{
     color:#83c9b0;
+}
+/* nav tabs*/
+.nav-link-text{
+    color:white;
+    background-color: #83c9b0;
+}
+
+
+
+#lecture .nav-item {
+    background-color: #83c9b0;
+    color: white;
+}
+
+#login_page{
+     color:#83c9b0;
+}
+
+#quiz_main .card,#quiz_main .progress{
+    margin:auto;
+    margin-bottom: 2rem;
+}
+.navbar .container{
+    text-align: center;
+}
+.rank,.notice{
+    color:#83c9b0;
+    font-weight:bold;
+}
+.rank .col-md-8{
+    background-color: #83c9b0;
+    color:white;
+    padding: .8rem;
+}
+.rank_detail{
+   border-bottom-style: solid;
+    border-color: white;
+    border-width: thick;
 }

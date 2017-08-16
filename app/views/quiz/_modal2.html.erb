@@ -1,0 +1,108 @@
+<button class="btn btn-default" data-toggle="modal" data-target="#practice_<%=@prac%>">연습하기</button>
+
+
+<!--전화/메시지 연습하기-->
+
+  <!--스마트폰 화면으로 연습하기 modal창 부분-->
+ 
+ <div class="modal fade bd-example-modal-lg" id="practice_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+      
+              <!-- slides
+    ================================================== -->
+
+
+<div class="slideshow-container">
+  <div class="mySlides" id="firstSlide">
+    <div class="numbertext">1 / 3</div>
+    <div class="slide-content">
+      <!--연습하기 퀴즈 부분-->
+            
+                 <div class="modal-header">
+                     <h3>번호를 입력한 후, 연락처를 등록하기 위해서는 어떤 버튼을 눌러야 할까요? </h3>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>     
+                 
+                 <div class="modal-body">
+                     <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                     <div class="smartphone-body_4">
+                           <!--<input type="hidden" name="question" value="홈버튼은 어디에 있을까요?">-->
+                           <button class="button1" name="answer" value="correct" title="연락처를 등록하는 버튼입니다." style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button2" name="answer" value="wrong" title="전화목록으로 돌아가는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button3" name="answer" value="wrong" title="통화버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button4" name="answer" value="wrong" title="영상통화 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button5" name="answer" value="wrong" title="번호등록 취소버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                     </div>        
+                  </div>
+            
+    </div>
+   </div>
+  </div>
+  <!--연습하기 퀴즈 부분 끝--> 
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <div class="slide-content">
+        <!--연습하기 퀴즈 부분-->
+            
+                 <div class="modal-header">
+                     <h3>최근통화목록에서 '우리아빠'에게 전화를 하기위해 할 수 있는 조작방법은 무엇인가요?</h3>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>     
+                 
+                 <div class="modal-body">
+                     <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                     <div class="smartphone-body_5">
+                           <!--<input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">-->
+                           <button class="button1" name="answer" value="correct" title="왼쪽에서 오른쪽으로 끌기" style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button2" name="answer" value="wrong" title="전화통화 버튼" style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button3" name="answer" value="wrong" title="오른쪽에서 왼쪽으로 끌기" style="cursor:pointer" onClick='btnClick2()'></button>
+                     </div>        
+                  </div>
+    
+    </div>
+  </div>
+ </div>  
+ <!--연습하기 퀴즈 부분 끝--> 
+        
+        <div class="slideshow-container">
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <div class="slide-content">
+               <!--연습하기 퀴즈 부분-->
+                    
+                         <div class="modal-header">
+                             <h3>전화번호나 이름으로 상대방을 검색하기 위해서 터치해야할 부분은 어디일까요? </h3>
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>     
+                         
+                         <div class="modal-body">
+                             <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                             <div class="smartphone-body_6">
+                                   <input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">
+                                   <form action="/quiz/<%=@subject.id%>/practice" id="practice" method="get" >
+                                       <button class="button1" type="submit" name="answer" value="correct" title="상대방 검색 부분입니다." style="cursor:pointer" onClick='btnClick3()'></button>
+                                   </form>
+                                       <button class="button2" type="submit"name="answer" value="wrong" title="메시지를 보내는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                       <button class="button3" type="submit"name="answer" value="wrong" title="파일첨부 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                             </div>        
+                          </div>
+            
+            <!--연습하기 퀴즈 부분 끝--> 
+            </div>
+          </div>
+         </div>  
+        <br>
+        <div style="text-align:center">
+          <span class="dot active" ></span>
+          <span class="dot" ></span>
+          <span class="dot" ></span>
+        </div>
+            <!-- /.slides -->
+
+        </div>
+    </div>
+</div> 
+

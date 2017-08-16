@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>스마트폰 스쿨</title>
+  
+  <script src="https://ajax.googleapis.com/ajxwax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  <%= favicon_link_tag 'logo.ico' %>
+  <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<%= asset_path 'favicon2.png' %>">
+  <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<%= asset_path 'favicon3.png' %>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+     -->
+
+</head>
+<body>
+
+<nav class="navbar ">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">스마트폰 스쿨</a>
+    </div>
+    <ul class="nav navbar-nav" id="nav-main">
+      <li ><a href="/">메인 화면</a></li>
+      <li ><a href="/index">공지방</a></li>
+       <li ><a href="/user/rank">랭킹</a></li>
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+     <!-- <a href="/new" style="float: left; margin-right: 50px;" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;글작성 하기</a>-->
+      <% if user_signed_in? %>
+      <li><a href="#"><%= current_user.username%>님 환영합니다.</a></li>
+      <li><a href="/user/mypage"><span class="glyphicon glyphicon-user"></span> 내 정보</a></li>
+      <li><a href="/users/sign_out"><span class="glyphicon glyphicon-user"></span> 로 그 아 웃</a></li>
+      <% else %>
+      <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회 원 가 입</a></li>
+      <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로 그 인</a></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- 메인화면 슬라이드 넘어가는 부분  끝------->
+<div class="container">
+  <%= yield %>
+</div>
+
+</body>
+</html>

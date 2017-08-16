@@ -1,13 +1,23 @@
-
-
 <div class="rank">
-    <h4>순위<h4>
-    <img src="/assets/rank.png" id="rank"></img><br>
-    <%for i in 0..(@rank.size - 1) %>
-   <h4> <%=i+ 1%>등 </h4>
-    <%=@rank[i][1]%>님
-    <%= @rank[i][0] %>%
-    <br>
-
-<%end %>
+    <div class="row">
+        <div class="col-md-4">
+        
+            <h4>순위<h4>
+            <img src="/assets/winner-cup.png" id="rank"></img><br>
+        </div>
+      
+        <div class="col-md-8" >
+            <%for i in 0..(@rank.size - 1) %>
+            <div class="rank_detail">
+               <h4> <%=i+ 1%>등 </h4>
+                <%=@rank[i][1]%>님
+                <%= @rank[i][0] %>%
+                <br>
+            </div>
+            <%end %>
+        </div>
+       
+    </div>
 </div>
+
+
