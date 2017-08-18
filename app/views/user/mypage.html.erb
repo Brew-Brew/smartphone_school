@@ -1,14 +1,21 @@
-<div class="card" id="card_user">
-  <img src="https://image.flaticon.com/icons/svg/375/375278.svg" alt="Avatar" style="width:100%">
 
-</div>
-  <div class="container" style="text-align: center">
-    <h4><b><%=@user.username%>님</b></h4> 
+    <div class="grade" style="text-align: center; position:relative;top:130px;left:400px; box-sizing: initial;">
+    
+      <div class="card" id="card_user" style="position:relative;top:-170px; left:80px; box-shadow:2px 2px 4px 2px #999; background-color:white;">
+  
+      <img class="img-circle" alt="Avatar" src="https://image.flaticon.com/icons/svg/375/375278.svg" style="">
+
+      </div>
+    <div class="gradetext"style="position:relative;top:-150px;">  
+    <h4><b><%=@user.username%> 님</b></h4>
+    
     <h4><%= @user.phonenumber %></h4>
     <h4>전체 성취율: <%= @user.study %> %</h4>
     <div>
     <% for i in 0..(@score.size - 1)%>
     <p>과목<%= i+ 1 %> 점수:<%= @score[i].total_score %></p> 
     <% end %>
+    
+    </div>
     </div>
   </div>

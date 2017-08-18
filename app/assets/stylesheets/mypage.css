@@ -1,0 +1,24 @@
+.grade{
+    width: 350px;
+  height: 350px;
+  /*margin: 50px auto;*/
+  border-radius: 20px;
+  position: relative;
+  padding-top: 35px;
+  background: #ABD7C8;
+  
+  color: white;
+  text-align: left;
+}
+
+#card_user {
+    overflow:hidden;
+    border-radius:100px;
+    width:200px;
+    height:200px;
+    background-size:90px 0px; 
+}
+
+#grade{
+    margin-top: 300px;
+}

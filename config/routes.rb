@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :quizzes
+    resources :subjects
+    resources :users
+    resources :comments
+    resources :posts
+    resources :scores
+
+    root to: "quizzes#index"
+  end
+
   get 'user/test'
   get 'user/rank'
   get 'user/mypage'

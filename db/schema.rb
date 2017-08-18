@@ -59,9 +59,10 @@ ActiveRecord::Schema.define(version: 20170811053912) do
     t.string   "name"
     t.string   "lecture"
     t.integer  "score"
+    t.integer  "subject_num"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_subjects_on_user_id"
   end
 

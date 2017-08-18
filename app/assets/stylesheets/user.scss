@@ -152,6 +152,8 @@ input[type="password"]{
   border: 0px;
   padding: 5px;
   font-size: 16px;
+  
+  
    border: 2px solid #fff;
   transition: all 0.3s ease;
   border-radius: 5px;
@@ -183,7 +185,7 @@ input[type="email"]:focus{
 }
 
 
-input[type="submit"]{
+.inner-screen2 input[type="submit"]{
   display: block;
   background: #1abc9d;
   width: 314px;
@@ -199,6 +201,58 @@ input[type="submit"]{
   transition: all 0.3s ease;
 }
 
+.inner-screen input[type="submit"]{
+  display: block;
+  background: #1abc9d;
+  width: 314px;
+  padding: 12px;
+  cursor: pointer;
+  color: #fff;
+  border: 0px;
+  margin: auto;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+//과목 상세페이지
+.subject_title .col-md-6{
+    color: white;
+    width: 30rem;
+    margin-left: 3rem;
+}
+.quiz_score,.practice_score{
+    background-color: 158 158 158 0;
+    color: black;
+}
+.subject_title .row{
+      margin: 4rem;
+}
+
+//퀴즈 부분
+#answer input[type="submit"]{
+  margin-top: 5rem;
+   width: 5rem;
+   height: 5rem;
+   font-size: 20px;
+   border-radius: 5px;
+}
+.modal-header{
+    background-color: #83c9b0;
+    color: white;
+    border-radius: 5px;
+}
+.button-school{
+    background-color: white;
+    border-radius: 5px;
+    font-style:bold;
+    font-size: 20px;
+}
+//퀴즈 부분 끝
+
+
 input[type="submit"]:hover{
   background: #09cca6
 }
@@ -206,6 +260,9 @@ input[type="submit"]:hover{
 a{
   text-align: center;
   font-family: Arial;
+  
+  
+  
   color: gray;
   display: block;
   

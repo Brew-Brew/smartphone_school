@@ -1,66 +1,64 @@
-<!-- 메인화면 슬라이드 넘어가는 부분 ------->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <p style="text-align: center">
-      <img src='/assets/main-1.jpg' alt="메인" style="max-width: 100%; height: auto;">
-      </p>
-      <div class="carousel-caption">
-       
-      </div>
-    </div>
-
-    <div class="item">
-      <p style="text-align: center">
-      <img src='/assets/main-1.jpg' alt="메인" style="max-width: 100%; height: auto;">
-      </p>
-      <div class="carousel-caption">
-      </div>
-    </div>
-
-    <div class="item">
-     <p style="text-align: center">
-      <img src='/assets/main-1.jpg' alt="메인" style="max-width: 100%; height: auto;">
-      </p>
-      <div class="carousel-caption">
-      </div>
-    </div>
-  </div>
-
-
-</div>
-<!-- 메인화면 슬라이드 넘어가는 부분  끝------->
-<div class="row">        
-    <% @subjects.each do |s|%>   
-    <div class="col-md-4" id="quiz_main">
-      <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="https://image.flaticon.com/icons/svg/138/138979.svg" alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title"><%= s.name %></h4>
-          <p class="card-text">배워봅시다!</p>
-          
-        </div>
-        
-        <div class="card-block">
-          <a href="/quiz/<%= s.id %>" class="card-link">학습하기</a>
-         
-        </div>
-      </div>
-<div class="progress" style="width: 20rem">
-  <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <%=s.score%>%;">
-   <%=s.score %>%
-  </div>
-</div>
-    </div>
-    
-     <% end %>
+  <div class="row">   
      
- </div>
+      <% @subjects.each do |s|%>  
+      
+      <div class="col-md-4" id="quiz_main" style="margin:0px;">
+          <% if (s.name.include? '주요 버튼 및 기능') %>
+           <div class="card1" style="border-radius: 20px; width: 30rem; position:relative; left:90px; top:100px;box-shadow:2px 2px 4px 2px #999;">
+          <% elsif (s.name.include? '전화/메시지') %>
+          <div class="card2" style="width: 30rem; position:relative; left:308px; top:-347px; box-shadow:2px 2px 4px 2px #999; border-radius: 20px;">
+          <% elsif (s.name.include? '카메라') %>
+          <div class="card3" style="width: 30rem; position:relative; left:308px; top:-347px; box-shadow:2px 2px 4px 2px #999; border-radius: 20px;">
+          <% elsif (s.name.include? '환경설정') %>
+          <div class="card4" style="width: 30rem; position:relative; left:-663px; top:40px;  box-shadow:2px 2px 4px 2px #999; border-radius: 20px;">
+          <% elsif (s.name.include? '마켓/어플') %>
+          <div class="card5" style="width: 30rem; position:relative; left:308px; top:-345px;  box-shadow:2px 2px 4px 2px #999; border-radius: 20px;">
+          <% elsif (s.name.include? 'SNS') %>
+          <div class="card6" style="width: 30rem; position:relative; left:308px; top:-345px;  box-shadow:2px 2px 4px 2px #999; border-radius: 20px;">
+          <% end %>
+          
+          <div class="box shadow-outside" style="border-radius: 20px; background-size: 400px 400px; background-image: url('/assets/card.png');"> 
+          <% if (s.name.include? '주요 버튼 및 기능') %>
+          <img class="card-img-top1" src="/assets/click.png" style="height: 180px; margin:10px; background-color:#83c9b0;">
+          <% elsif (s.name.include? '전화/메시지') %>
+          <img class="card-img-top2" src="/assets/call.png" style="margin:50px; background-color:#83c9b0;">
+          <% elsif (s.name.include? '카메라') %>
+          <img class="card-img-top3" src="/assets/cam.png" style="margin:50px; background-color:#83c9b0;">
+          <% elsif (s.name.include? '환경설정') %>
+          <img class="card-img-top4" src="/assets/setting.png" style="margin:50px; background-color:#83c9b0;">
+          <% elsif (s.name.include? '마켓/어플') %>
+          <img class="card-img-top5" src="/assets/market.png" style="margin:50px; background-color:#83c9b0;">
+          <% elsif (s.name.include? 'SNS') %>
+          <img class="card-img-top6" src="/assets/message2.png" style="margin:50px; background-color:#83c9b0;">
+          <% end %>
+          
+          <div class="card-block" >
+        <button type="submit" style="border-radius: 50%; width:85px; heighdt:85px;border: 0; background: transparent; float:right; position:relative; bottom:62px; right:10px; box-shadow: 10px 2px 10px #888888;" onclick="location.href='/quiz/<%= s.id %>'">
+          <img src="/assets/cardplay.png" width="85px"; height="85px" alt="submit" />
+        </button>
+        
+            <h4 class="card-title" style="text-align:left; size:100px 100px; margin:20px; font-size:20px;"><%= s.name %></h4>
+            <p class="card-text" style = "text-align:left; margin:20px; font-size:15px;">배워봅시다!</p>
+            
+          </div>
+          
+        
+  <div class="progress" style="width: 28rem; margin-bottom :10px">
+    <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="background-color: #83c9b0; min-width: 4em; width: <%=s.score%>%;">
+     <%=s.score %>%
+    </div>
+  </div>
+  
+  <div class="nothing" style="color: white; font-size:1px">" "</div>
+  
+  
+      </div>
+      
+       <% end %>
+    </div>
+    </div>
+   </div>
+
+
+ 

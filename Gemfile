@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-
+gem "administrate"
 gem 'rails_db'
 gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
 gem 'devise'

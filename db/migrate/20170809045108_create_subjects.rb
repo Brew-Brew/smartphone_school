@@ -4,6 +4,7 @@ class CreateSubjects < ActiveRecord::Migration
       t.string :name
       t.string :lecture
       t.integer :score
+      t.integer :subject_num
       t.references :user, index: true, foreign_key: true
      
       t.timestamps null: false

@@ -88,7 +88,7 @@ function showSlides(n) {
      sweetAlert("분발하세요ㅠ", "다시 한번 풀어봐요!", "error");
   }   
     function change1(obj){
-        obj.style.background = 'green';
+        obj.style.background = '#83c9b0';
         obj.style.color = 'white';
     }
 

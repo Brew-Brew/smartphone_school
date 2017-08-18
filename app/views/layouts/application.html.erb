@@ -19,6 +19,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
+  
+  
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
      -->
@@ -26,33 +28,65 @@
 </head>
 <body>
 
-<nav class="navbar ">
-  <div class="container">
+<nav class="navbar" style="margin-bottom: 0px">
+  <div class="container-fluid">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="/">-->
+      <!--  <img alt="Brand" src="/assets/logo.ico" height="25" width="25">-->
+      <!--</a>-->
       <a class="navbar-brand" href="/">스마트폰 스쿨</a>
     </div>
-    <ul class="nav navbar-nav" id="nav-main">
-      <li ><a href="/">메인 화면</a></li>
-      <li ><a href="/index">공지방</a></li>
-       <li ><a href="/user/rank">랭킹</a></li>
-    </ul>
     
-    <ul class="nav navbar-nav navbar-right">
-     <!-- <a href="/new" style="float: left; margin-right: 50px;" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;글작성 하기</a>-->
-      <% if user_signed_in? %>
-      <li><a href="#"><%= current_user.username%>님 환영합니다.</a></li>
-      <li><a href="/user/mypage"><span class="glyphicon glyphicon-user"></span> 내 정보</a></li>
-      <li><a href="/users/sign_out"><span class="glyphicon glyphicon-user"></span> 로 그 아 웃</a></li>
-      <% else %>
-      <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회 원 가 입</a></li>
-      <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로 그 인</a></li>
-      <% end %>
-    </ul>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" id="nav-main">
+        <li ><a href="/">메인 화면</a></li>
+        <li ><a href="/index">공지방</a></li>
+         <li ><a href="/user/rank">랭킹</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+       <!-- <a href="/new" style="float: left; margin-right: 50px;" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;글작성 하기</a>-->
+        <% if user_signed_in? %>
+        <li><a href="#"><%= current_user.username%>님 환영합니다.</a></li>
+        <li><a href="/user/mypage"><span class="glyphicon glyphicon-user"></span> 내 정보</a></li>
+        <li><a href="/users/sign_out"><span class="glyphicon glyphicon-user"></span> 로 그 아 웃</a></li>
+        <% else %>
+        <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회 원 가 입</a></li>
+        <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로 그 인</a></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>
-
-
-<div class="container">
+<% if controller.controller_name == 'quiz' && controller.action_name == 'index' %>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="/assets/new-main.png" alt="Los Angeles" style="width: 100vw; height: 300px; object-fit: cover;">
+      </div>
+      <div class="item">
+        <img src="/assets/slide_01.jpg" alt="Chicago"  style="width: 100vw; height: 300px; object-fit: cover;">
+      </div>
+      <div class="item">
+        <img src="/assets/slide_02.jpg" alt="New York"  style="width: 100vw; height: 300px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="container noin-container">
   <%= yield %>
 </div>
 

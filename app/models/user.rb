@@ -56,15 +56,15 @@ User.where(id: self.id).update(study: 0)
 
 
 subject_list = [
-  [self.id,'주요 버튼 및 기능','https://www.youtube.com/embed/EsDOZ4Bz7Vk'],
-  [self.id,'전화/메시지','https://www.youtube.com/embed/fds8542N7Cs'],
-  [self.id,'카메라','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'환경설정','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'마켓/어플','https://www.youtube.com/embed/hwfyujTryAI'],
-  [self.id,'SNS','https://www.youtube.com/embed/hwfyujTryAI']
+  [self.id,'주요 버튼 및 기능','https://www.youtube.com/embed/EsDOZ4Bz7Vk',1],
+  [self.id,'전화/메시지','https://www.youtube.com/embed/fds8542N7Cs',2],
+  [self.id,'카메라','https://www.youtube.com/embed/hwfyujTryAI',3],
+  [self.id,'환경설정','https://www.youtube.com/embed/hwfyujTryAI',4],
+  [self.id,'마켓/어플','https://www.youtube.com/embed/hwfyujTryAI',5],
+  [self.id,'SNS','https://www.youtube.com/embed/hwfyujTryAI',6]
 ]
-subject_list.each do |current_user,name,lecture|
-  Subject.create(user_id: current_user,name: name,lecture: lecture,score: 0)
+subject_list.each do |current_user,name,lecture,subject_num|
+  Subject.create(user_id: current_user,name: name,lecture: lecture,subject_num: subject_num,score: 0)
 end
 
 
@@ -104,11 +104,11 @@ quiz_list2=[
   end
   
 quiz_list3=[
-  [self.id,(self.id - 1)*6 + 3,'메뉴-3 문제1','문제내용1','O'],
-  [self.id,(self.id - 1)*6 + 3,'메뉴-3 문제2','문제내용2','X'],
-  [self.id,(self.id - 1)*6 + 3,'메뉴-3 문제3','문제내용3','O'],
-  [self.id,(self.id - 1)*6 + 3,'메뉴-3 문제4','문제내용4','X'],
-  [self.id,(self.id - 1)*6 + 3,'메뉴-3 문제5','문제내용5','O']
+  [self.id,(self.id - 1)*6 + 3,'카메라 문제1','','O'],
+  [self.id,(self.id - 1)*6 + 3,'카메라 문제2','문제내용2','X'],
+  [self.id,(self.id - 1)*6 + 3,'카메라 문제3','문제내용3','O'],
+  [self.id,(self.id - 1)*6 + 3,'카메라 문제4','문제내용4','X'],
+  [self.id,(self.id - 1)*6 + 3,'카메라 문제5','문제내용5','O']
   ]
  
   quiz_list3.each do |user_id,subject_id,title,content,answer|
