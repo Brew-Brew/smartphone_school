@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'rails_12factor'
 gem "administrate"
 gem 'rails_db'
 gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
