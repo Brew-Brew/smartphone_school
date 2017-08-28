@@ -28,8 +28,8 @@
 </head>
 <body>
 
-<nav class="navbar" style="margin-bottom: 0px">
-  <div class="container-fluid">
+<nav class="navbar" style="margin-bottom: 0px; background-color:">
+  <div class="container-fluid" style="margin: 20px; ">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -40,25 +40,25 @@
       <!--<a class="navbar-brand" href="/">-->
       <!--  <img alt="Brand" src="/assets/logo.ico" height="25" width="25">-->
       <!--</a>-->
-      <a class="navbar-brand" href="/">스마트폰 스쿨</a>
+      <a href="/"><img alt="Brand" src="/assets/logo-8.png" height="70px" weight:"200px" ></a>
     </div>
     
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav" id="nav-main">
-        <li ><a href="/">메인 화면</a></li>
-        <li ><a href="/index">공지방</a></li>
-         <li ><a href="/user/rank">랭킹</a></li>
+      <ul class="nav navbar-nav" id="nav-main" style="margin:10px">
+        <li ><a href="/" style="font-size:20px;">메인 화면</a></li>
+        <li ><a href="/index" style="font-size:20px;">공지방</a></li>
+         <li ><a href="/user/rank" style="font-size:20px;">랭킹</a></li>
       </ul>
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="margin:10px">
        <!-- <a href="/new" style="float: left; margin-right: 50px;" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;글작성 하기</a>-->
         <% if user_signed_in? %>
-        <li><a href="#"><%= current_user.username%>님 환영합니다.</a></li>
-        <li><a href="/user/mypage"><span class="glyphicon glyphicon-user"></span> 내 정보</a></li>
-        <li><a href="/users/sign_out"><span class="glyphicon glyphicon-user"></span> 로 그 아 웃</a></li>
+        <li><a href="#" style="font-size:25px;"><%= current_user.username%>님 환영합니다.</a></li>
+        <li><a href="/user/mypage" style="font-size:20px;"><span class="glyphicon glyphicon-user"></span> 내 정보</a></li>
+        <li><a href="/users/sign_out" style="font-size:20px;"><span class="glyphicon glyphicon-user"></span> 로 그 아 웃</a></li>
         <% else %>
-        <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회 원 가 입</a></li>
-        <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로 그 인</a></li>
+        <li><a href="/users/sign_up" style="font-size:20px;"><span class="glyphicon glyphicon-user"></span> 회 원 가 입</a></li>
+        <li><a href="/users/sign_in" style="font-size:20px;"><span class="glyphicon glyphicon-log-in"></span> 로 그 인</a></li>
         <% end %>
       </ul>
     </div>
@@ -75,13 +75,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="/assets/new-main.png" alt="Los Angeles" style="width: 100vw; height: 300px; object-fit: cover;">
+        <img src="/assets/new-main.png" alt="Los Angeles" style="width: 100vw; height: 400px; object-fit: cover;">
       </div>
       <div class="item">
-        <img src="/assets/slide_01.jpg" alt="Chicago"  style="width: 100vw; height: 300px; object-fit: cover;">
+        <img src="/assets/slide_01.jpg" alt="Chicago"  style="width: 100vw; height: 400px; object-fit: cover;">
       </div>
       <div class="item">
-        <img src="/assets/slide_02.jpg" alt="New York"  style="width: 100vw; height: 300px; object-fit: cover;">
+        <img src="/assets/slide_02.jpg" alt="New York"  style="width: 100vw; height: 400px; object-fit: cover;">
       </div>
     </div>
   </div>

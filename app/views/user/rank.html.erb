@@ -7,30 +7,32 @@
     <h1><strong>스마트폰 스쿨 학습 순위<strong></h1>
     </div>
     </div>
-    <h3>순위페이지입니다.</h3>
 </div>
 
 <table class="table table-condensed">
+    <thead>
       <tr id="table-top">
           <td><strong>순위</strong></td>
           <td>  </td>
           <td><strong>이름</strong></td>
           <td><strong>성취율</strong></td>
       </tr>
-   <%for i in 0..(@rank.size - 1) %>
-          <tr style="height: 6rem;">
-              <td><%=i+ 1%>등</td>
-               <%if (i == 0 )||(i== 1) ||(i== 2)%>
-              <td><img src="/assets/chevron.png" class="honor"></img></td>
-              <% else %>
-              <td></td>
-              <% end %>
-              <td><%=@rank[i][1]%>님</td>
-              <td> <%= @rank[i][0] %>%</td>
-              
-          </tr>
-    <%end %>  
-  
+     </thead>
+     <tbody>
+       <%for i in 0..(@rank.size - 1) %>
+              <tr style="height: 6rem;">
+                  <td><%=i+ 1%>등</td>
+                   <%if (i == 0 )||(i== 1) ||(i== 2)%>
+                  <td><img src="/assets/chevron.png" class="honor"></img></td>
+                  <% else %>
+                  <td></td>
+                  <% end %>
+                  <td><%=@rank[i][1]%>님</td>
+                  <td> <%= @rank[i][0] %>%</td>
+                  
+              </tr>
+        <%end %>  
+      </tbody>
 </table>
 
 

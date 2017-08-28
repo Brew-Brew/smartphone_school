@@ -10,7 +10,6 @@ class QuizController < ApplicationController
 
   #정답 관련 및 성취율 업데이트관련
   def score
-    #퀴즈관련
     @subject=Subject.find(params[:id])
     @quiz=Quiz.where(subject_id: params[:id])
     @quiznum=@quiz.size
@@ -36,17 +35,30 @@ class QuizController < ApplicationController
     @answer = params[:answer]
     @score=Score.where(subject_id: params[:id])
     @subject=Subject.find(params[:id])
+    @total_subject=Subject.where(user_id: current_user.id)
 
     if (@answer=='correct')
       if (@score[0].practice_score <100)
         @score[0].practice_score =100
         @score[0].total_score += @score[0].practice_score/2
         @score[0].save
-
+        
+        
         @subject.score = @score[0].total_score
         @subject.save
-        @user.study=@score[0].total_score/6
+        
+        @total=@total_subject.select('score')
+        
+        total=0
+        for i in 0..(@total_subject.size- 1)
+         total+=@total[i].score
+        end  
+        
+        total=total/@total.size
+        
+        @user.study=total
         @user.save
+      
       end
     end
     ##user의 total점수가 100%면 완료페이지로 넘어가게 redirect
@@ -68,6 +80,8 @@ class QuizController < ApplicationController
     @subject=Subject.find(params[:id])
     @quiz=Quiz.where(subject_id: params[:id])
     @quiznum=@quiz.size
+    @total_subject=Subject.where(user_id: current_user.id)
+
 
     @ans= $answer_list
 
@@ -106,7 +120,17 @@ class QuizController < ApplicationController
         @score[0].save
         @subject.score=@score[0].total_score
         @subject.save
-        @user.study=@score[0].total_score/6
+        
+        @total=@total_subject.select('score')
+        
+        total=0
+        for i in 0..(@total_subject.size- 1)
+         total+=@total[i].score
+        end  
+        
+        total=total/@total.size
+        
+        @user.study=total
         @user.save
       end
     end
@@ -136,3 +160,5 @@ class QuizController < ApplicationController
   end
   
 end
+
+
