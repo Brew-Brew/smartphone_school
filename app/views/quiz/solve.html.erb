@@ -77,11 +77,9 @@
         풀기
       </button>
       </center>
-      <%# if (@score[0].quiz_score == 100) %>
-
-
+      <% if (@score[0].quiz_score == 100) %>
       <button class="btn btn-default" style = "color: #83c9b0; background-color:white; margin-bottom: 20px; border-radius: 30px; padding: 0.6rem 1.8rem; width: 30%; height:50px; font-size:20px; font-weight: bold; border: 2px solid #83c9b0;" data-toggle="modal" data-target="#practice_1">연습하기</button>
-
+      <% end %>
 
       <!--전화/메시지 연습하기-->
       

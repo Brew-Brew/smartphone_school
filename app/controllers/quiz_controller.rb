@@ -113,6 +113,7 @@ class QuizController < ApplicationController
       user_score= 100 * @sum / @quiznum
 
       #user의 점수가 예전보다 높으면 높은 점수로 업데이트
+      
       if (user_score/2>@subject.score)
 
         @score[0].quiz_score =user_score
