@@ -107,7 +107,7 @@ quiz_list3=[
   [self.id,(self.id - 1)*6 + 3,'카메라 문제1','사진은 갤러리 라는 앱에서 볼수있다.','O'],
   [self.id,(self.id - 1)*6 + 3,'카메라 문제2','카카오톡 앱에서 저장한 사진은 KaKaoTalk 이라는 폴더에 따로 저장된다.','O'],
   [self.id,(self.id - 1)*6 + 3,'카메라 문제3','화면에 손가락을 화면에 대고 벌리면 다른 사진을 확인 할 수 있다.','X'],
-  [self.id,(self.id - 1)*6 + 3,'카메라 문제4','공유 버튼을 통해 메시지로 사진을 전송할 수 있다.']
+  [self.id,(self.id - 1)*6 + 3,'카메라 문제4','공유 버튼을 통해 메시지로 사진을 전송할 수 있다.','O']
   ]
  
   quiz_list3.each do |user_id,subject_id,title,content,answer|

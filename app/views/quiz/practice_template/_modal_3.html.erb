@@ -1,0 +1,96 @@
+<!-- slides
+    ================================================== -->
+
+
+<div class="slideshow-container">
+  <div class="mySlides" id="firstSlide">
+    <div class="numbertext">1 / 3</div>
+    <div class="slide-content">
+      <!--연습하기 퀴즈 부분-->
+            
+                 <div class="modal-header">
+                     <h3> 카메라를 전환하여 내 얼굴이 나오게 하려면 어느 버튼을 눌러야 할까요? </h3>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>     
+                 
+                 <div class="modal-body">
+                     <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                     <div class="smartphone-body_7">
+                           <!--<input type="hidden" name="question" value="홈버튼은 어디에 있을까요?">-->
+                           <button class="button1" name="answer" value="correct" title="카메라를 전환하는 버튼입니다." style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button2" name="answer" value="wrong" title="동영상 녹화하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button3" name="answer" value="wrong" title="갤러리로 가는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button4" name="answer" value="wrong" title="카메라 찍는 셔터버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button5" name="answer" value="wrong" title="메뉴를 확장하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                     </div>        
+                  </div>
+            
+    </div>
+   </div>
+  </div>
+  <!--연습하기 퀴즈 부분 끝--> 
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <div class="slide-content">
+        <!--연습하기 퀴즈 부분-->
+            
+                 <div class="modal-header">
+                     <h3>다음 폴더 중 카카오톡에서 다운받은 사진은 어느 폴더로 저장이 될까요?</h3>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>     
+                 
+                 <div class="modal-body">
+                     <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                     <div class="smartphone-body_8">
+                           <!--<input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">-->
+                           <button class="button1" name="answer" value="correct" title="카카오톡다운로드 폴더" style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button2" name="answer" value="wrong" title="카카오스토리 폴더" style="cursor:pointer" onClick='btnClick1()'></button>
+                           <button class="button3" name="answer" value="wrong" title="인스타그램 폴더" style="cursor:pointer" onClick='btnClick2()'></button>
+                           <button class="button4" name="answer" value="wrong" title="푸디 폴더" style="cursor:pointer" onClick='btnClick2()'></button>
+                     </div>        
+                  </div>
+    
+    </div>
+  </div>
+ </div>  
+ <!--연습하기 퀴즈 부분 끝--> 
+        
+        <div class="slideshow-container">
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <div class="slide-content">
+               <!--연습하기 퀴즈 부분-->
+                    
+                         <div class="modal-header">
+                             <h3>다음 사진을 다른 사람에게 전송하고 싶을 때 어느 것을 눌러야 할까요? </h3>
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>     
+                         
+                         <div class="modal-body">
+                             <h5>스마트폰 화면에서 마우스로 클릭해주세요!</h5>
+                             <div class="smartphone-body_9">
+                                   <input type="hidden" name="question" value="전화를 걸려면 어떤 버튼을 눌러야 할까요?">
+                                   <form action="/quiz/<%=@subject.id%>/practice" id="practice" method="get" >
+                                       <button class="button1" name="answer" value="correct" title="사진을 공유하는 버튼입니다." style="cursor:pointer" onClick='btnClick3()'></button>
+                                   </form>
+                                       
+                                   <button class="button2" name="answer" value="wrong" title="사진을 편집하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                   <button class="button3" name="answer" value="wrong" title="즐겨찾기에 해당 사진을 등록하는 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                   <button class="button4" name="answer" value="wrong" title="뒤로가기 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                                   <button class="button5" name="answer" value="wrong" title="더보기 버튼입니다." style="cursor:pointer" onClick='btnClick2()'></button>
+                             </div>        
+                          </div>
+            
+            <!--연습하기 퀴즈 부분 끝--> 
+            </div>
+          </div>
+         </div>  
+        <br>
+        <div style="text-align:center">
+          <span class="dot active" ></span>
+          <span class="dot" ></span>
+          <span class="dot" ></span>
+        </div>
+            <!-- /.slides -->

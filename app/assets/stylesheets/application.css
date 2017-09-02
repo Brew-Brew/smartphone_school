@@ -16,6 +16,7 @@
  */
 .noin-container {
     margin: 20px 0;   
+    width: 100%;
 }
  
 .user_page{
@@ -90,6 +91,67 @@
    text-align: center;
    display: inline-block;
 }
+
+.modal-body .smartphone-body_7 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/camera-1.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_8 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/camera-2.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_9 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/camera-3.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_10 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/setting-1.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_11 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/setting-2.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
+.modal-body .smartphone-body_12 {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   background: url('/assets/setting-3.png') no-repeat center center;
+   background-size: 50% 100%;
+   text-align: center;
+   display: inline-block;
+}
+
 
 /* 과목1 1번째 연습하기 버튼 css*/
 
@@ -773,4 +835,591 @@
 #table-top{
     background-color: #83c9b0;
     color: white;
+}
+
+
+
+/*********************************/
+/* ###과목3### 연습문제 버튼 css */
+/*********************************/
+
+/*과목 3-1 연습문제 버튼*/
+
+
+/* 카메라 전환 버튼 */
+.smartphone-body_7 .button1 {
+    opacity: 0;
+    position: absolute;
+    bottom: 4%;
+    left: 35%;
+    font-size: 0px;
+    padding: 25px 3.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_7 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_7 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 3.5%;
+    right: 34%;
+    font-size: 0px;
+    padding: 25px 4%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_7 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+.smartphone-body_7 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 3%;
+    right: 25%;
+    font-size: 0px;
+    padding: 25px 3.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_7 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+/*셔터버튼 css*/
+.smartphone-body_7 .button4 {
+    opacity: 0;
+    position: absolute;
+    bottom: 3.5%;
+    left: 44.5%;
+    font-size: 0px;
+    padding: 30px 5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_7 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_7 .button5 {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    right: 25.5%;
+    font-size: 0px;
+    padding: 23px 2.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_7 .button5:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+/*과목 3-2 연습문제 버튼*/
+
+
+/* 정답 버튼 */
+.smartphone-body_8 .button1 {
+    opacity: 0;
+    position: absolute;
+    bottom: 1%;
+    left: 26%;
+    font-size: 0px;
+    padding: 63px 7%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_8 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_8 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 25.5%;
+    right: 26%;
+    font-size: 0px;
+    padding: 63px 7%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_8 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+.smartphone-body_8 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 25.5%;
+    left: 26%;
+    font-size: 0px;
+    padding: 63px 7%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_8 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+/*셔터버튼 css*/
+.smartphone-body_8 .button4 {
+    opacity: 0;
+    position: absolute;
+    bottom: 50%;
+    right: 26%;
+    font-size: 0px;
+    padding: 63px 7%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_8 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+/*과목 3-3 연습문제 버튼*/
+
+
+/* 정답 버튼 */
+.smartphone-body_9 .button1 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 41%;
+    font-size: 0px;
+    padding: 28px 3.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_9 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_9 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    right: 41%;
+    font-size: 0px;
+    padding: 28px 3.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_9 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+.smartphone-body_9 .button3 {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    right: 33.5%;
+    font-size: 0px;
+    padding: 25px 3%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_9 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_9 .button4 {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    font-size: 0px;
+    padding: 25px 3%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_9 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_9 .button5 {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    right: 25%;
+    font-size: 0px;
+    padding: 25px 3.5%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_9 .button5:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*********************************/
+/* ###과목4### 연습문제 버튼 css */
+/*********************************/
+
+
+/*과목 4-1 연습문제 버튼*/
+
+
+/* 정답 버튼 */
+.smartphone-body_10 .button1 {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    font-size: 0px;
+    padding: 45px 6%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_10 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_10 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 26%;
+    right: 26%;
+    font-size: 0px;
+    padding: 18px 4%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_10 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+.smartphone-body_10 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    right: 36.5%;
+    font-size: 0px;
+    padding: 45px 6%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_10 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_10 .button4 {
+    opacity: 0;
+    position: absolute;
+    bottom: 1%;
+    right: 30%;
+    font-size: 0px;
+    padding: 15px 20%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_10 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+/*과목 4-2 연습문제 버튼*/
+
+
+/* 정답 버튼 */
+.smartphone-body_11 .button1 {
+    opacity: 0;
+    position: absolute;
+    bottom: 47%;
+    left: 25%;
+    font-size: 0px;
+    padding: 18px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_11 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_11 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 23%;
+    right: 25%;
+    font-size: 0px;
+    padding: 18px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_11 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+.smartphone-body_11 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 31%;
+    right: 25%;
+    font-size: 0px;
+    padding: 18px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_11 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_11 .button4 {
+    opacity: 0;
+    position: absolute;
+    top: 38.5%;
+    right: 25%;
+    font-size: 0px;
+    padding: 18px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_11 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+/*과목 4-3 연습문제 버튼*/
+
+
+/* 정답 버튼 */
+.smartphone-body_12 .button1 {
+    opacity: 0;
+    position: absolute;
+    top: 33%;
+    left: 25%;
+    font-size: 0px;
+    padding: 18px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_12 .button1:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_12 .button2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 4%;
+    right: 25%;
+    font-size: 0px;
+    padding: 32px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_12 .button2:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+
+.smartphone-body_12 .button3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 30%;
+    right: 25%;
+    font-size: 0px;
+    padding: 22px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_12 .button3:hover {
+    opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
+}
+
+
+.smartphone-body_12 .button4 {
+    opacity: 0;
+    position: absolute;
+    top: 12%;
+    right: 25%;
+    font-size: 0px;
+    padding: 27px 25%;
+    border: 0;
+    outline: 0;
+}
+
+.smartphone-body_12 .button4:hover {
+   opacity: 0.5;
+    background:#000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: red;
 }
