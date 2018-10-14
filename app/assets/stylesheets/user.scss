@@ -87,9 +87,9 @@ h1{
 }
 
 .inner-screen{
- 
-  height: 50rem;
-  background: #83c9b0;
+ width: 100vw;
+  height: 100vh;
+  background: #cfe0da;
   margin: 0px auto;
   padding-top: 2rem;
 }
@@ -104,14 +104,18 @@ h1{
 
 
 .form{
-  width: 40rem;
-  height: 30rem;
+  width: 50rem;
+  height: 70rem;
   background: #edeff1;
   margin: 8rem auto;
   padding-top: 20px;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+}
+
+.form-introduction{
+  margin-bottom: 100px;
 }
 
 .form2{

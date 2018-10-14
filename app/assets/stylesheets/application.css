@@ -14,9 +14,10 @@
  *= require sweetalert2
  *= require_tree .
  */
-.noin-container {
-    margin: 20px 0;   
+.noin-container {  
     width: 100%;
+    margin: 0 0 !important;
+    padding: 10px 0px !important;
 }
  
 .user_page{

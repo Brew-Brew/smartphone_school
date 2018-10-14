@@ -40,7 +40,6 @@ Rails.application.routes.draw do
   post  'comment/create'                => 'comment#create'     # 댓글 생성
   delete  'comment/destroy/:comment_id' => 'comment#destroy'    # 댓글 삭제
   post  'comment/update/:comment_id'    => 'comment#update'     # 댓글 수정
-  
    devise_scope :user do
     authenticated :user do
       root 'quiz#index', as: :authenticated_root
